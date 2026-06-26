@@ -559,8 +559,6 @@ The repository includes visualizations generated during model development and ev
 - ⭐ Feature Importance
 - 📋 Model Comparison Charts
 
-> **Note:** Save your generated figures inside the `Figures/` directory to display them automatically in the README.
-
 ---
 
 # 🎯 Applications
