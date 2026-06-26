@@ -156,14 +156,6 @@ This project was developed with the following objectives:
 
 ---
 
-# 💡 Why GLP-1 Receptor?
-
-The **Glucagon-Like Peptide-1 (GLP-1) receptor** plays a crucial role in regulating insulin secretion, blood glucose levels, appetite, and body weight. It has become one of the most important therapeutic targets for treating **Type 2 Diabetes Mellitus** and **Obesity**.
-
-Identifying novel GLP-1 receptor agonists through traditional laboratory screening is both time-consuming and expensive. QSAR modeling provides a computational alternative by predicting the biological activity of compounds before experimental validation, significantly reducing both time and research costs.
-
----
-
 # 🧬 Molecular Descriptors & Molecular Fingerprints
 
 Molecular descriptors and fingerprints provide a numerical representation of chemical structures, enabling machine learning algorithms to identify relationships between molecular properties and biological activity.
@@ -236,55 +228,6 @@ These fingerprints encode molecular substructures into binary feature vectors su
 
 ---
 
-# ⚙️ Methodology
-
-The project follows a complete QSAR workflow for predicting GLP-1 receptor bioactivity.
-
-### Step 1 – Data Collection
-
-- Retrieve GLP-1 receptor bioactivity data from ChEMBL.
-- Filter compounds with experimentally validated activity values.
-- Remove duplicate molecules.
-
-### Step 2 – Data Preprocessing
-
-- Handle missing values.
-- Standardize molecular representations.
-- Convert IC50 values into pIC50.
-- Prepare the dataset for descriptor generation.
-
-### Step 3 – Descriptor Generation
-
-Generate molecular descriptors using:
-
-- RDKit
-- PaDEL-Descriptor
-- Lipinski Analysis
-
-### Step 4 – Fingerprint Generation
-
-Generate molecular fingerprints for structural representation.
-
-### Step 5 – Feature Engineering
-
-- Descriptor selection
-- Correlation analysis
-- Removal of redundant features
-- Data normalization (where applicable)
-
-### Step 6 – Machine Learning
-
-Develop both:
-
-- Regression Models
-- Classification Models
-
-### Step 7 – Model Evaluation
-
-Evaluate the predictive performance using standard regression and classification metrics.
-
----
-
 # 🏛️ System Architecture
 
 ```text
@@ -325,45 +268,6 @@ Evaluate the predictive performance using standard regression and classification
                        ▼
        GLP-1 Bioactivity Prediction
 ```
-
----
-
-# 📊 Exploratory Data Analysis (EDA)
-
-Exploratory Data Analysis was performed to understand the chemical characteristics of GLP-1 receptor agonists before building predictive models.
-
-The analysis included:
-
-- Bioactivity distribution
-- Molecular weight distribution
-- LogP distribution
-- TPSA distribution
-- Descriptor correlation analysis
-- Fingerprint analysis
-- Drug-likeness evaluation
-- Feature distribution
-- Missing value analysis
-
-EDA helped identify important molecular characteristics and ensured high-quality input features for QSAR model development.
-
----
-
-# 🎯 Feature Engineering
-
-Feature engineering plays a critical role in improving QSAR model performance.
-
-The following techniques were applied:
-
-- Descriptor extraction
-- Molecular fingerprint generation
-- Feature selection
-- Correlation analysis
-- Removal of redundant descriptors
-- Data standardization
-- Preparation of machine learning datasets
-
-These steps reduce noise, improve model generalization, and enhance prediction accuracy.
-
 ---
 
 # 🤖 Machine Learning Models
@@ -579,12 +483,7 @@ The developed pipeline can assist researchers in:
 ```text
 QSAR_BASED_DRUG_DISCOVERY/
 │
-├── Data/
-│   ├── Raw_Data/
-│   ├── Processed_Data/
-│   └── Final_Dataset/
-│
-├── Notebooks/
+├── Models/
 │   ├── 1_Data_Preprocessing.ipynb
 │   ├── 2_RDKit_Descriptors.ipynb
 │   ├── 3_PaDEL_Descriptors.ipynb
@@ -597,10 +496,6 @@ QSAR_BASED_DRUG_DISCOVERY/
 │   ├── regression_results.png
 │   ├── feature_importance.png
 │   └── correlation_heatmap.png
-│
-├── Models/
-│
-├── Results/
 │
 ├── requirements.txt
 │
