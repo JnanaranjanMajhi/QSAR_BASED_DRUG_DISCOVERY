@@ -492,10 +492,6 @@ QSAR_BASED_DRUG_DISCOVERY/
 │
 ├── Figures/
 │   ├── workflow.png
-│   ├── roc_curve.png
-│   ├── regression_results.png
-│   ├── feature_importance.png
-│   └── correlation_heatmap.png
 │
 ├── requirements.txt
 │
