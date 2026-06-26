@@ -491,7 +491,7 @@ QSAR_BASED_DRUG_DISCOVERY/
 │   └── 5_Classification_Models.ipynb
 │
 ├── Figures/
-│   ├── workflow.png
+│   └── workflow.png
 │
 ├── requirements.txt
 │
